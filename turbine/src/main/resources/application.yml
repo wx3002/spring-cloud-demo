@@ -1,0 +1,18 @@
+server:
+  port: 8080
+#  这里也需要硬写上去
+management:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/
+turbine:
+#参数指定了需要手机监控信息的服务名
+  app-config: eureka-consumer-feign-hystrix
+#  指定了集群的名字,可以启动多个turbine来构建不同的集群
+#此处的default 一定要中 new String来包裹一下
+  cluster-name-expression: new String("default")
+#  参数设置为true,可以让同一主机名与但口号的组合来进行区分
+  combine-host-port: true

@@ -1,0 +1,4 @@
+server:
+  port: 11000
+
+#  这里的正确打开方式是http://localhost:11000/hystrix

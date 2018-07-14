@@ -1,0 +1,20 @@
+server:
+  port: 9003
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/
+
+#防止雪崩要添加配置
+feign:
+  hystrix:
+    enabled: true
+#开启断路器后需要添加配置
+#
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
