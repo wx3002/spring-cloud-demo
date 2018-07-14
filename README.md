@@ -39,6 +39,7 @@ public class EurekaClientApplication {
     client:
   	register-with-eureka:true
   	fetch-registry:true
+# 这后面的需要加
   server:
     port: 8000
   eureka:
